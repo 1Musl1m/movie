@@ -14,8 +14,8 @@
                             </NuxtLink>
                         </li>
                         <li>
-                            <NuxtLink to="/films" class="block px-3 text-2xl text-white hover:text-sky-600 active:text-sky-900 transition-colors">
-                                Фильмы
+                            <NuxtLink to="/news" class="block px-3 text-2xl text-white hover:text-sky-600 active:text-sky-900 transition-colors">
+                                Новости
                             </NuxtLink>
                         </li>
                         <li>

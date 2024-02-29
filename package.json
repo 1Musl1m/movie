@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@nuxt/ui": "^2.13.0",
+    "@nuxt/ui-pro": "^1.0.0",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.10.2",
     "pinia": "^2.1.7",
+    "primevue": "^3.49.1",
     "vue": "^3.4.19",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.17",
     "nuxt-aos": "^1.2.3",
+    "nuxt-primevue": "^0.3.1",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
   }

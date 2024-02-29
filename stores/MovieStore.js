@@ -8,7 +8,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'Пассажиры',
                 title: "Молодые пациенты с диагнозом фиб...",
                 path: '/films__img/Passengers.jpg',
-                link: 'url(...)',
                 isWatched: true
             },
             {
@@ -16,7 +15,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'Забвение',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Zabvenie.jpg',
-                link: 'url(...)',
                 isWatched: true
             },
             {
@@ -24,7 +22,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'В метре друг от друга',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/health.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
@@ -32,7 +29,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
@@ -40,7 +36,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'Пассажиры',
                 title: "Молодые пациенты с диагнозом фиб...",
                 path: '/films__img/Passengers.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
@@ -48,7 +43,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'Забвение',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Zabvenie.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
@@ -56,7 +50,6 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'В метре друг от друга',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/health.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
@@ -64,65 +57,73 @@ export const useMovieStore = defineStore('movieStore', {
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 9,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 10,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 11,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 12,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 13,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 14,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
             {
-                id: 8,
+                id: 15,
                 name: 'Оно',
                 title: 'Молодые пациенты с диагнозом фиб...',
                 path: '/films__img/Оно.jpg',
-                link: 'url(...)',
                 isWatched: false
             },
         ]
-     })
-});
+     }),
+     actions: {
+        //список фильмов с сервера
+        async fetchMovies() {
+            const response = await fetch('/api/movie')
+            this.movies = await response.json()
+        },
+
+        //находим фильм по slug
+        findMovieById(id) {
+            return this.movies.find(movie => movie.id === id)
+        },
+
+        findMovieBySlug(slug) {
+            return this.movies.find(movie => movie.slug === slug)
+        }
+     }
+})

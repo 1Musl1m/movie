@@ -1,9 +1,7 @@
 <template>
     <div>
         <NuxtLink to="/films">
-            <UChip text="3" size="2xl">
-                <UButton icon="i-heroicons-heart" color="gray" @click="addItem(id)"/>
-            </UChip>
+            <UButton icon="i-heroicons-heart" color="gray" @click="addItem(id)"/>
         </NuxtLink>
     </div>
 </template>

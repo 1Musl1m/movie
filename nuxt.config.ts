@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     'nuxt-aos',
     '@nuxt/ui',
     '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ],
   css: [
     '@/assets/style/tailwind.css',

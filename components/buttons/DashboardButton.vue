@@ -6,10 +6,11 @@ const route = useRoute()
 const links = [
   [{
     id: 1,
-    label: 'User',
+    label: 'Войти',
     avatar: {
       src: 'https://pm1.aminoapps.com/8061/a7c0315915d58c70de5abf197d1e3ee7613ee1dfr1-736-736v2_hq.jpg',
     },
+    to: '/options/authorization'
   }], [{
     id: 2,
     label: 'Главная',
@@ -34,7 +35,7 @@ const links = [
     id: 6,
     label: 'Фильмы',
     icon: 'i-heroicons-play-solid',
-    to: "/options/films"
+    to: '/movie'
   }, {
     id: 7,
     label: 'Комната',
@@ -69,15 +70,13 @@ const links = [
         <USlideover v-model="isOpen" 
                     :ui="{
                       width: 'max-w-80',
-
                     }">
             <div class="p-2">
-                <UVerticalNavigation 
+                <UVerticalNavigation @click="isOpen = false"
                     :links="links"
                     :ui="{
                         avatar: {
                             size: 'xl',
-
                         },
                         label: 'text-lg',
                     }"
