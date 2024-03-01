@@ -1,13 +1,5 @@
 <template>
-  <div>
-    <h1>Настройки</h1>
+  <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Настройки</h1>
   </div>
 </template>
-
-<script lang="ts" setup>
-
-</script>
-
-<style>
-
-</style>
